@@ -3,10 +3,10 @@
 ##
 ##
 ## Notice that, in what follows, one could use the names 
-## "setinverse" and "getinverse". However, the names "setsolve" 
-## and "getsolve" were used instead in order to emphasize the 
+## "setinverse" and "getinverse". The names "setsolve" and 
+## "getsolve" were used instead in order to emphasize the 
 ## native function "solve" in R. This choice agrees with the 
-## name "cacheSolve" given in the assignment.
+## name "cacheSolve" given in the present assignment.
 ##
 ##
 ## The makeCacheMatrix function essentially creates a list 
@@ -31,14 +31,14 @@ makeCacheMatrix <- function(x = matrix()) {
              getsolve = getsolve)
 }
 
-## The cacheSolve function calculates the inverse of the 
+## The cacheSolve function produces the inverse of the 
 ## "special matrix" created with the above function 
-## makeCacheMatrix. However, it first checks whether the
-## inverse matrix has already been calculated. If so, it gets 
-## the inverse matrix from the cache and skips the 
-## computation. Otherwise, it calculates the inverse matrix of 
-## the given data (matrix) and sets the value of the inverse 
-## matrix in the cache via the setsolve function.
+## makeCacheMatrix. First, it checks whether the inverse
+## matrix has already been calculated. If so, it gets the  
+## inverse matrix from the cache rather than computing that 
+## matrix. Otherwise, it calculates the inverse matrix of 
+## the given data (the given matrix) and sets the value of 
+## the inverse matrix in the cache via the setsolve function.
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix 'm' that is the inverse of 'x'
